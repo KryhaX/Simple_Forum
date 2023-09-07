@@ -1,0 +1,124 @@
+@use 'colors' as c;
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background: linear-gradient(45deg, c.$darkerpurple, c.$purple);
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+	top: -8px;
+}
+
+// Log in
+.box {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 450px;
+	height: 70vh;
+	background: linear-gradient(c.$babyblue, c.$purple);
+	border-radius: 15px;
+	box-shadow: 0 0 20px c.$black;
+
+	&__title {
+		position: absolute;
+		top: 80px;
+		color: c.$white;
+		font-size: 4.75em;
+		font-weight: 500;
+		letter-spacing: 0.5px;
+	}
+
+	&__input {
+		position: relative;
+		width: 70%;
+		margin: 20px 0;
+        color: c.$white;
+		font-size: 1.8em;
+		border-bottom: 2px solid c.$white;
+
+		&-data {
+			width: 100%;
+			height: 45px;
+			border: none;
+			outline: none;
+			font-size: 1em;
+			padding: 0 35px 0 5px;
+			color: c.$white;
+			background-color: transparent;
+		}
+
+		&-label {
+			position: absolute;
+			top: 50%;
+			left: 5px;
+			transform: translateY(-50%);
+			color: c.$white;
+			transition: 0.2s;
+		}
+
+        .fa-solid{
+            position: absolute;
+            right: 15px;
+            bottom: 10px;
+        }
+	}
+
+	.link {
+		margin-top: 7px;
+
+		&__register {
+			color: c.$white;
+			font-size: 1.5em;
+
+			&-bold {
+				padding-left: 3px;
+				font-size: 1.2em;
+				color: c.$white;
+				text-decoration: none;
+				font-weight: 700;
+			}
+		}
+	}
+
+	&__btn {
+		position: absolute;
+		bottom: 85px;
+		padding: 15px 50px;
+		font-size: 2em;
+		letter-spacing: 0.5px;
+		font-weight: 500;
+		color: c.$white;
+		background-color: c.$darkpurple;
+		border-radius: 8px;
+		border: none;
+		transition: background-color 0.5s;
+
+		&:hover {
+			background-color: c.$babyblue;
+		}
+	}
+}
