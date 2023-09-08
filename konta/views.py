@@ -1,8 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # Logowanie i Rejestracja
 from .models import Logowanie
 from .forms import LogowanieForm # , RejestracjaForm
+
+# Moje konto
+def moje_konto(request):
+
+    return render(request, 'moje_konto.html')
+
 
 def logowanie(request):
     # Zmienna przechowująca Form logowania która przyjmuje POST
@@ -11,6 +17,8 @@ def logowanie(request):
     if form_logowanie.is_valid():
         logowanie = form_logowanie.save()
         logowanie.save()
+
+        return redirect(moje_konto)
 
     return render(request, 'logowanie.html', {'form_logowanie': form_logowanie})
 
