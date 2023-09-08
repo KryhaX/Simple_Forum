@@ -21,8 +21,8 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
 	width: 100%;
+	height: 100vh;
 }
 
 input:focus ~ label,
@@ -38,7 +38,7 @@ input:valid ~ label {
 	justify-content: center;
 	align-items: center;
 	width: 450px;
-	height: 60vh;
+	height: 70vh;
 	background: linear-gradient(c.$babyblue, c.$purple);
 	border: 2px solid c.$white;
 	border-radius: 15px;
