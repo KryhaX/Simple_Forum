@@ -1,20 +1,13 @@
-<!doctype html>
-<html lang="pl">
+{% load bootstrap %}
+{% block tytul %}Logowanie{% endblock %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="{% static 'logowanie_static.css' %}">
-  <title>Logowanie</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/main.css">
-</head>
+{% block strona %}
+    <div class="card" style="width: 26rem;">
+        <i class="fa-solid fa-hand fa-bounce fa-lg"></i>
+      <div class="card-body">
+        <h5 class="card-title">Zaloguj się</h5>
 
+<<<<<<< HEAD
 <body>
   <div class="container">
     <form class="box">
@@ -40,3 +33,16 @@
 </body>
 
 </html>
+=======
+        <form method="post">
+            {% csrf_token %}
+            {{form_logowanie|bootstrap}}
+            <p></p>
+            <button type="submit" class="btn btn-outline-danger">Zaloguj <i class="fa-solid fa-right-to-bracket fa-spin"></i></button>
+            <a href="" class="btn btn-success">Zarejestruj sie <i class="fa-solid fa-left-long"></i></a>
+            <a href="" class="btn btn-dark">Wstecz <i class="fa-solid fa-left-long"></i></a>
+        </form>
+      </div>
+    </div>
+{% endblock %}
+>>>>>>> c6890a8f84425201066555560833506054f4880e
