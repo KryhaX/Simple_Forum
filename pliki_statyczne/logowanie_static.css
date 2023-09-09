@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: linear-gradient(#8cabff, #512b81);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+  top: -8px;
+}
+
+.box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: 70vh;
+  background: linear-gradient(#8cabff, #512b81);
+  border: 2px solid #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #fff;
+}
+.box__title {
+  position: absolute;
+  top: 80px;
+  color: #fff;
+  font-size: 4.75em;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  pointer-events: none;
+}
+.box__input {
+  position: relative;
+  margin: 20px 0;
+  width: 70%;
+  color: #fff;
+  font-size: 1.8em;
+  border-bottom: 2px solid #fff;
+}
+.box__input-data {
+  padding: 0 35px 0 5px;
+  width: 100%;
+  height: 45px;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+}
+.box__input-label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: #fff;
+  transition: 0.4s;
+  pointer-events: none;
+}
+.box__input .fa-solid {
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+}
+.box .link {
+  margin-top: 10px;
+}
+.box .link__register {
+  color: #fff;
+  font-size: 1.5em;
+}
+.box .link__register-bold {
+  padding-left: 3px;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.box__btn {
+  position: absolute;
+  bottom: 85px;
+  padding: 15px 50px;
+  color: #fff;
+  background-color: #35155d;
+  font-size: 2em;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: 17px;
+  transition: background-color 0.5s;
+}
+.box__btn:hover {
+  background-color: #8cabff;
+}/*# sourceMappingURL=main2.css.map */
