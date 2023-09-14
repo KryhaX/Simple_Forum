@@ -119,6 +119,7 @@ input:valid ~ label {
 		border: none;
 		border-radius: 17px;
 		transition: background-color 0.5s;
+		cursor: pointer;
 
 		&:hover {
 			background-color: c.$babyblue;
