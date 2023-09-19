@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Logowanie
+from .models import Logowanie,Pokoj
 
 # @admin.register(Logowanie)
 # class LogowanieAdmin(admin.ModelAdmin):
@@ -9,7 +9,7 @@ from .models import Logowanie
 #     list_filter = ("nazwa_uzytkownika", "email")
 #     search_fields = ("nazwa_uzytkownika", "email" )
 admin.site.register(Logowanie)
-
+admin.site.register(Pokoj)
 
 # @admin.register(Rejestracja)
 # class RejestracjaAdmin(admin.ModelAdmin):

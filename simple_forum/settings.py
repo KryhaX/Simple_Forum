@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'bootstrapform',
 
     # Moje Aplikacje
-    'konta',
+    'base',
 
 ]
 

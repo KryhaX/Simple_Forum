@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <form class="box" method="post">
+      {% csrf_token %}
+      <h2 class="box__title">Stwórz Pokój</h2>
+      <div class="box__input">
+        <input class="box__input-data" type="text" name="tytul" id="tytul" required="required">
+        <label class="box__input-label" for="tytul">Podaj Tytuł</label>
+        <i class="fa-solid fa-user"></i>
+      </div>
+      <div class="box__input">
+        <input class="box__input-data" type="text" name="opis" id="opis" required="required">
+        <label class="box__input-label" for="opis">Podaj opis</label>
+        <i class="fa-solid fa-lock"></i>
+      </div>
+      <input class="box__btn" type="submit" value="Zaloguj się">
+    </form>
+
+</body>
+</html>

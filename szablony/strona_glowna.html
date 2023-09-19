@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="ar" dir="rtl">
   <head>
@@ -13,9 +14,18 @@
   <body>
     <h1>Strona Główna</h1>
     <a href="{% url 'wyloguj' %}" class="btn btn-dark">Wyloguj</a>
-    <!-- Optional JavaScript; choose one of the two! -->
+    <a href="{% url 'stworz_pokoj' %}" class="btn btn-dark">Stworz pokoj</a>
+    <div>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
+      <div>
+        {% for pokoj in pokoje %}
+            <div>
+              <h5>{{pokoj.id}} -- <a href="{% url 'pokoj' pokoj.id %}">{{pokoj.tytul}}</a></h5>
+            </div>
+        {% endfor %}
+      </div>
+
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
