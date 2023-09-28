@@ -12,7 +12,13 @@
     <title>Strona Główna</title>
   </head>
   <body>
-    <h1>Strona Główna</h1>
+    <h3>Strona Główna</h3>
+    {% if user.is_authenticated %}
+    <h3>Witaj, {{ user.username }}<h3>
+{% else %}
+    <h3>Nie jesteś zalogowany.</h3>
+{% endif %}
+
     <a href="{% url 'wyloguj' %}" class="btn btn-dark">Wyloguj</a>
     <a href="{% url 'stworz_pokoj' %}" class="btn btn-dark">Stworz pokoj</a>
     <div>

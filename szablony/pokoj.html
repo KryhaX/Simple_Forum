@@ -4,5 +4,18 @@
 <h1>{{pokoj.tytul}}</h1>
 <p>Stworzono: {{pokoj.stworzono}}</p>
 
+<form method="post">
+    <h2 class="box__title">Czat pokoju: {{pokoj.tytul}}</h2>
+    {% csrf_token %}
+<ul>
+{% for czat in czaty %}
+    <li>{{czat.uzytkownik.username}} : {{ czat.czat }} -- {{czat.stworzono}}</li>
+{% endfor %}
+</ul>
+    <p></p>
+    <input type="text" name="czat" id="wiadomosc" required="required"><input type="submit" value="Wyślij">
+</form>
+
+
 
 {% endblock %}

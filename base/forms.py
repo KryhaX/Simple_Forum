@@ -1,8 +1,7 @@
 from django import forms
 from django.forms import ModelForm
 
-# Logowanie i Rejestracja
-from .models import Logowanie
+from .models import Logowanie, Czat
 
 # Logowanie
 class LogowanieForm(ModelForm):
@@ -11,3 +10,8 @@ class LogowanieForm(ModelForm):
         fields = ['nazwa_uzytkownika', 'haslo']
 
 
+#  Czat
+class CzatForm(ModelForm):
+    class Meta:
+        model = Czat
+        fields = ['czat']
