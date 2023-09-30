@@ -13,11 +13,18 @@
   </head>
   <body>
     <h3>Strona Główna</h3>
+
     {% if user.is_authenticated %}
     <h3>Witaj, {{ user.username }}<h3>
 {% else %}
     <h3>Nie jesteś zalogowany.</h3>
 {% endif %}
+
+                <form action="{% url 'wyszukaj' %}" method="POST">
+    {% csrf_token %}
+    <input type="text" name="tytul">
+    <input type="submit" name="submit" value="wyszukaj pokoj">
+</form>
 
     <a href="{% url 'wyloguj' %}" class="btn btn-dark">Wyloguj</a>
     <a href="{% url 'stworz_pokoj' %}" class="btn btn-dark">Stworz pokoj</a>
@@ -30,6 +37,14 @@
             </div>
         {% endfor %}
       </div>
+
+<!--        Wyniki wyszukiwania -->
+
+{% for wynik in wyniki %}
+
+    <h5><a href="{% url 'pokoj' pk=wynik.pk %}">{{wynik.tytul}}</a></h5>
+
+{% endfor %}
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

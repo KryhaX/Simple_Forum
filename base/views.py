@@ -101,3 +101,13 @@ def stworz_pokoj(request):
         return redirect('strona_glowna')
 
     return render(request, 'stworz_pokoj.html')
+
+def wyszukaj(request):
+    if request.method == "POST":
+        tytul = request.POST.get('tytul', None)
+        if tytul:
+            wyniki = Pokoj.objects.filter(tytul__contains=tytul)
+            url_id = Pokoj.objects.filter(pk__contains=tytul)
+            return render(request, 'strona_glowna.html', {"wyniki":wyniki})
+
+    return render(request, 'strona_glowna.html')

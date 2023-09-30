@@ -12,5 +12,6 @@ urlpatterns = [
     path('wyloguj/',views.wyloguj,name='wyloguj'),
     path('pokoj/<str:pk>',views.pokoj,name='pokoj'),
     path('stworz_pokoj',views.stworz_pokoj,name='stworz_pokoj'),
+    path('strona_glowna/wyszukaj',views.wyszukaj,name='wyszukaj'),
 
 ]
