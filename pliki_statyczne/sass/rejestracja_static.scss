@@ -27,7 +27,7 @@ body {
 
 input:focus ~ label,
 input:valid ~ label {
-	top: -8px;
+	top: -0.4px;
 }
 
 // Log in
@@ -37,8 +37,8 @@ input:valid ~ label {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 450px;
-	height: 80vh;
+	width: 350px;
+	height: 60vh;
 	background: linear-gradient(c.$babyblue, c.$purple);
 	border: 2px solid c.$white;
 	border-radius: 15px;
@@ -46,9 +46,9 @@ input:valid ~ label {
 
 	&__title {
 		position: absolute;
-		top: 80px;
+		top: 50px;
 		color: c.$white;
-		font-size: 4.75em;
+		font-size: 2.75em;
 		font-weight: 500;
 		letter-spacing: 0.5px;
 		pointer-events: none;
@@ -56,10 +56,10 @@ input:valid ~ label {
 
 	&__input {
 		position: relative;
-		margin: 20px 0;
+		margin: 10px 0;
 		width: 70%;
 		color: c.$white;
-		font-size: 1.8em;
+		font-size: 1.5em;
 		border-bottom: 2px solid c.$white;
 
 		&-data {
@@ -95,12 +95,12 @@ input:valid ~ label {
 
 		&__register {
 			color: c.$white;
-			font-size: 1.5em;
+			font-size: 1.2em;
 
 			&-bold {
 				padding-left: 3px;
 				color: c.$white;
-				font-size: 1.2em;
+				font-size: 1.25em;
 				font-weight: 700;
 				text-decoration: underline;
 			}
@@ -110,11 +110,11 @@ input:valid ~ label {
 	&__btn {
 		font-family: 'Open Sans', sans-serif;
 		position: absolute;
-		bottom: 85px;
-		padding: 15px 50px;
+		bottom: 50px;
+		padding: 1.2rem 3rem;
 		color: c.$white;
 		background-color: c.$darkpurple;
-		font-size: 2em;
+		font-size: 1.75em;
 		font-weight: 500;
 		letter-spacing: 0.5px;
 		border: none;
@@ -124,6 +124,44 @@ input:valid ~ label {
 
 		&:hover {
 			background-color: c.$babyblue;
+		}
+	}
+}
+
+// MEDIA QUERIES
+@media (min-width: 576px) {
+	input:focus ~ label,
+	input:valid ~ label {
+		top: -2px;
+	}
+
+	.box {
+		width: 400px;
+		height: 65vh;
+
+		&__title {
+			font-size: 3em;
+		}
+
+		&__input {
+			margin: 15px 0;
+			font-size: 1.7em;
+		}
+
+		.link {
+			&__register {
+				font-size: 1.5em;
+
+				&-bold {
+					font-size: 1.2em;
+				}
+			}
+		}
+
+		&__btn {
+			bottom: 45px;
+			padding: 1.4rem 3.2rem;
+			font-size: 1.9em;
 		}
 	}
 }
